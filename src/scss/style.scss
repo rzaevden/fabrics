@@ -2,3 +2,19 @@
 @import 'mixins/*.scss';
 
 @import 'global.scss';
+
+// main
+
+@import 'layout.scss';
+
+// common
+
+@import './common/through__button.scss';
+
+// blocks
+
+@import 'blocks.scss';
+
+// media
+
+@import 'media.scss';

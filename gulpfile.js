@@ -103,6 +103,7 @@ function watcher() {
   watch(paths.src + 'scss/*.scss', styles);
   watch(paths.src + 'js/*.js', scripts);
   watch(paths.src + '*.html', htmls);
+  watch(paths.src + 'img/', images);
 }
 
 function serve() {
