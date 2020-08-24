@@ -180,3 +180,49 @@
     font-weight: bold;
 }
 
+// about company
+
+
+
+.content__main-aboutcompany {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.content__main-aboutcompany-item {
+    display: flex;
+    margin-bottom: rem(100px);
+
+    &_reverse {
+        flex-direction: row-reverse;
+    }
+}
+
+.content__main-aboutcompany-pic {
+    width: rem(670px);
+
+}
+
+.content__main-aboutcompany-img {
+    max-width: 100%;
+}
+
+.content__main-aboutcompany-title {
+    margin-bottom: rem(10px);
+}
+
+.content__main-aboutcompany-text {
+    margin-bottom: rem(20px);
+}
+
+.content__main-aboutcompany-text_content {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin-left: rem(30px);
+
+    &_align {
+        margin-left: 0;
+        margin-right: rem(30px);
+    }
+}
