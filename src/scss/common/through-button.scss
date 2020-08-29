@@ -28,6 +28,10 @@
     &_black {
         border: 2px solid #000;
 
+        &_align {
+            margin-top: 150px;
+        }
+
         .through__link {
             color: #000;
         }
