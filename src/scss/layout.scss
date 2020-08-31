@@ -15,6 +15,12 @@ body {
     flex-direction: column;
     height: 99%;
 
+    &_footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     // &_aboutcompany {
     //     display: flex;
     //     flex-direction: column;
@@ -24,7 +30,7 @@ body {
 .wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
 
 
