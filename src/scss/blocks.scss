@@ -73,6 +73,7 @@
 .multicolored__block {
     width: 100%;
     height: 1%;
+    margin-bottom: rem(20px);
 }
 
 .multicolored__list {
@@ -143,7 +144,7 @@
 }
 
 .slider-two__content-item {
-    margin-right: rem(30px);
+    margin-right: rem(24px);
 
     &:last-child {
         margin-right: 0;
@@ -258,6 +259,10 @@
     margin-right: 2px;
     width: rem(130px);
     overflow: hidden;
+
+    &_catalog-width {
+        width: 14%;
+    }
 
     &_two {
         background: url('../img/design-prod.png ');
@@ -507,6 +512,10 @@
     height: 23.75rem;
     width: 60%;
     margin: 0 auto;
+
+    &_catalog {
+        width: 100%;
+    }
 }
 
 .categories__link {
@@ -529,3 +538,64 @@
     margin-left: 10px;
 }
 
+
+
+// catalog 
+
+.catalog {
+    background: none;
+    height: 6.25rem;
+}
+
+.content__var {
+    width: rem(1170px);
+    margin: 0 auto;
+
+    &_top {
+        margin-top: rem(50px);
+    }
+
+    &_center {
+        margin-top: rem(50px);
+        margin-bottom: rem(50px);
+    }
+
+    &_bottom {
+        margin-top: rem(50px);
+        margin-bottom: rem(50px);
+    }
+}
+
+.pag {
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.pag__list {
+    display: flex;
+}
+
+.pag__item {
+    margin-right: 3px;
+    a {
+        color: #000;
+    }
+}
+
+.pag__lastPage {
+    a {
+        color: #000;
+    }
+}
+
+.pag__arrow {
+    margin-left: 5px;
+}
+
+.pag__arrow-icon {
+    height: 10px;
+    width: 20px;
+}
