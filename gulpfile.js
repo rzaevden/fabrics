@@ -95,12 +95,19 @@ function images() {
     .pipe(dest(paths.build + 'img/'));
 }
 
+function cssCopy() {
+  return src(paths.src + 'css/*.css')
+    //.pipe(imagemin()) // если картинок будет много, то и времени будет уходить много
+    .pipe(dest(paths.build + 'css/'));
+}
+
 function clean() {
   return del('build/')
 }
 
 function watcher() {
   watch(paths.src + 'scss/*.scss', styles);
+  watch(paths.src + 'css/', cssCopy);
   watch(paths.src + 'js/*.js', scripts);
   watch(paths.src + '*.html', htmls);
   watch(paths.src + 'img/', images);
@@ -116,6 +123,7 @@ function serve() {
 }
 
 exports.styles = styles;
+exports.cssCopy = cssCopy;
 exports.scripts = scripts;
 exports.scriptsVendors = scriptsVendors;
 exports.htmls = htmls;
@@ -126,11 +134,11 @@ exports.watcher = watcher;
 
 exports.build = series(
   clean,
-  parallel(styles, svgSprite, scripts, scriptsVendors, htmls, images)
+  parallel(styles, svgSprite, scripts, scriptsVendors, htmls, images, cssCopy)
 );
 
 exports.default = series(
   clean,
-  parallel(styles, svgSprite, scripts, scriptsVendors, htmls, images),
+  parallel(styles, svgSprite, scripts, scriptsVendors, htmls, images, cssCopy),
   parallel(watcher, serve),
 );

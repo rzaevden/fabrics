@@ -33,6 +33,7 @@
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
+    "bxslider": "^4.2.14",
     "jquery": "^3.3.1",
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9"
