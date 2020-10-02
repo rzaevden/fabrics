@@ -66,6 +66,10 @@
 .logo__pic {
     width: 9.25rem;
     height: 2.75rem;
+
+    @include phones {
+        display: none;
+    }
 }
 
 // multicolored block
@@ -255,6 +259,10 @@
     &_align {
         margin-left: 0;
         margin-right: rem(30px);
+    }
+
+    @include phones {
+        display: none;
     }
 }
 
@@ -679,7 +687,7 @@ a.active,
 .bx-pager
 .bx-default-pager
 a:focus {
-    background: rgba(#fff, 0.7);
+    background: rgba(#fff, 0.8);
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {

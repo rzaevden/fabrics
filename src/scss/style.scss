@@ -5,9 +5,14 @@
 
 
 
+// resolutions
+
+$phones: 481px;
+
 // common
 
 @import './common/through-button.scss';
+@import './mixins/resolution.scss';
 
 // blocks
 
