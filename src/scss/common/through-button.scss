@@ -38,6 +38,13 @@
     }
 }
 
+.mobile {
+    display: none;
+    @include phones {
+        display: flex;
+    }
+}
+
 // .through__button {
 //     color: #fff;
 //     // padding: 5px 30px;
