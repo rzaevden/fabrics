@@ -44,13 +44,22 @@
 .col-center {
     display: flex;
     justify-content: center;
+    width: 33%;
+    align-items: center;
+
+    @include phones {
+        display: none;
+    }
 }
 
 .col-left,
-.col-center,
 .col-right {
     width: 33%;
     align-items: center;
+
+    @include phones {
+        width: 50%;
+    }
 }
 
 .col-right {
@@ -206,6 +215,10 @@
     justify-content: center;
     position: relative;
     height: rem(415px);
+
+    @include phones {
+        height: rem(315px);
+    }
     
 }
 
@@ -213,6 +226,10 @@
     position: absolute;
     top: rem(-200px);
     width: 100%;
+
+    @include phones {
+        top: rem(-88px);
+    }
 }
 
 .slider-two__content-list {
@@ -230,6 +247,10 @@
 .slider-two__content-item__img {
     width: rem(370px);
     height: rem(250px);
+
+    @include phones {
+        height: rem(106px);
+    }
 }
 
 .slider-two__content-item__colorline {
@@ -294,6 +315,7 @@
         &:first-child {
             flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
     }
 
@@ -305,6 +327,7 @@
 
     @include phones {
         width: 100%;
+        margin-bottom: rem(35px);
     }
 }
 
@@ -402,6 +425,10 @@
     left: -60%;
     z-index: 5;
     transition: .3s;
+
+    @include phones {
+        left: -140%;
+    }
 }
 
 .content__main-aboutcompany-pic__item-hiddenlink {
@@ -794,6 +821,10 @@ a:focus {
 
     .bx-viewport {
         height: 400px !important;
+
+        @include phones {
+            height: 260px !important;
+        }
     }
 
     .bx-controls-direction {
