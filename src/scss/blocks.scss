@@ -249,7 +249,7 @@
     height: rem(250px);
 
     @include phones {
-        height: rem(106px);
+        height: rem(90px);
     }
 }
 
@@ -316,6 +316,11 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin-bottom: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
@@ -455,6 +460,7 @@
     color: #fff;
     font-size: rem(14px);
     height: rem(100px);
+    position: relative;
 }
 
 .footer__col {
@@ -471,6 +477,64 @@
 
 .footer__inf-list {
     display: flex;
+
+    @include phones {
+        display: none;
+    }
+}
+
+.footer__inf-mobile {
+    text-decoration: underline;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    color: #fff;
+    position: absolute;
+    top: -100%;
+    left: -999999px;
+    background:#415365;
+    padding: rem(10px);
+    border-radius: rem(15px);
+    box-shadow: 5px 5px 13px #000;
+    opacity: 0;
+    // transition: .2s;
+    z-index: 8888;
+}
+
+.dropdown__inf-item {
+    margin-bottom: rem(5px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.dropdown__close {
+    position: absolute;
+    top: -8%;
+    left: 95%;
+    background: #415365;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+    
+}
+
+.dropdown__close-img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.dropdown__active {
+    left: 0;
+    opacity: 1;
+    transition: .1s;
 }
 
 .footer__inf-item {
@@ -723,7 +787,7 @@
 // slider-one
 
 .bx-wrapper {
-    height: 50%;
+    height: 60%;
     border: none;
     background: transparent;
     -webkit-box-shadow: none;
