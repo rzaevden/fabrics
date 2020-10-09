@@ -153,6 +153,55 @@
     }
 }
 
+// pag menu
+
+.header__center {
+    z-index: 999999999;
+}
+
+.header__pagin-list {
+    font-size: rem(12px);
+    display: flex;
+
+    a {
+        color: #fff;       ////////////// заменить цвет
+    }
+
+    &_color {
+        a {
+            color: #000;
+        }
+    }
+}
+
+.header__pagin-item {
+    margin-right: rem(5px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::before {
+        content: "/";
+        margin-right: 5px; 
+    }
+
+    &:first-child {
+        &::before {
+            content: "";
+        }
+    }
+}
+
+.page__active {
+    a {
+        color: #4c5153;
+    }
+}
+
+//
+
+
 .header__bottom {
     display: flex;
     justify-content: center;
@@ -441,12 +490,11 @@
     }
 }
 
-// .cardprodAlign {
-//     left: -115%;
-//     @include phones {
-//         background: #000;
-//     }
-// }
+.cardprodAlign {
+    @include phones {
+        left: -150%;
+    }
+}
 
 .content__main-aboutcompany-pic__item-hiddenlink {
     font-size: rem(12px);
