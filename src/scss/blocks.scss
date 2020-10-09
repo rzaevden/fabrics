@@ -21,6 +21,7 @@
 
     &_color {
         color: #000;
+        margin-top: rem(10px);
     }
 
 }
@@ -228,7 +229,7 @@
     width: 100%;
 
     @include phones {
-        top: rem(-88px);
+        top: rem(-72px);
     }
 }
 
@@ -294,6 +295,10 @@
 .content__main-aboutcompany {
     width: 60%;
     margin: 0 auto;
+
+    @include phones {
+        width: 65%;
+    }
 }
 
 .content__main-aboutcompany-list {
@@ -432,9 +437,16 @@
     transition: .3s;
 
     @include phones {
-        left: -140%;
+        left: -120%;
     }
 }
+
+// .cardprodAlign {
+//     left: -115%;
+//     @include phones {
+//         background: #000;
+//     }
+// }
 
 .content__main-aboutcompany-pic__item-hiddenlink {
     font-size: rem(12px);
@@ -486,8 +498,12 @@
 .footer__inf-mobile {
     text-decoration: underline;
     color: #fff;
-    display: flex;
+    display: none;
     align-items: center;
+
+    @include phones {
+        display: flex;
+    }
 }
 
 .dropdown {
@@ -875,7 +891,6 @@ a:focus {
 
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
     display: flex;
-
 }
 
 .slider-two {
@@ -887,7 +902,7 @@ a:focus {
         height: 400px !important;
 
         @include phones {
-            height: 260px !important;
+            height: 250px !important;
         }
     }
 
