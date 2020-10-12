@@ -954,7 +954,7 @@
     height: 5px;
 
     @include phones {
-        width: 45px;
+        width: 85%;
         height: 5px;
     }
 }
@@ -1009,10 +1009,20 @@ a:focus {
 
     .bx-pager-link {
         background: rgba(#cacaca, 0.4) !important;
+
+        @include phones {
+            width: 85%;
+        }
     }
 
     .active {
         background: rgba(#757575,0.7) !important;
+    }
+}
+
+.bx-pager-item {
+    @include phones {
+        width: 100%;
     }
 }
 // .bx-viewport {
