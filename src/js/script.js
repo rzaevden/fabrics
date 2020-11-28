@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    $('.slider-one__list').bxSlider({});
+    $('.header-bottom__list').bxSlider({});
 });
 
 $(document).ready(function () {
-  $('.slider-two__list').bxSlider({});
+  $('.content-var__list').bxSlider({});
 });
 
 
