@@ -155,7 +155,7 @@
     }
 }
 
-.nav {
+.through-panel {
     display: flex;
 
     a {
@@ -169,7 +169,7 @@
     }
 }
 
-.nav__col {
+.through-panel__col {
     width: 33.333%;
 
     &_center {
@@ -185,16 +185,19 @@
     }
 }
 
-.nav__logo {
+.through-panel__logo {
     width: rem(175px);
 }
 
-.nav__logo-pic {
+.through-panel__logo-pic {
     max-width: 100%;
 }
 
-.nav__col-item {
+.through-panel__col-list {
     display: flex;
+}
+
+.through-panel__col-item {
     margin-right: rem(40px);
 
     &:last-child {
@@ -232,7 +235,7 @@
 }
 
 .header-bottom__slider {
-    width: rem(1170px);
+    width: 65%;
     height: rem(500px);
     margin: 0 auto;
     display: flex;
@@ -246,6 +249,10 @@
     .bx-wrapper .bx-pager.bx-default-pager a.active {
         background: #fff;
       }
+}
+
+.header-bottom__item {
+    margin-left: 3px;
 }
 
 .header-bottom__item-title {
@@ -273,12 +280,12 @@
 
 .content-slider {
     position: absolute;
-    top: -60%;
+    top: -50%;
     left: 50%;
     transform: translate(-50%);
     // width: rem(1170px);
     // height: rem(480px);
-    width: 70%;
+    width: 62%; 
 
     .bx-wrapper .bx-prev {
         display: none;
@@ -307,7 +314,7 @@
 }
 
 .content-var__list {
-    // width: rem(1170px);
+    width: 100%;
     // height: rem(480px);
     // display: flex;
     margin: 0 auto;
@@ -315,7 +322,7 @@
 }
 
 .content-var__point {
-    margin-right: rem(30px);
+    margin-right: 5.128%;
 
     &:last-child {
         margin-right: 0;
@@ -345,12 +352,13 @@
     min-width: 100%;
 }
 
-.content-bottom {
-    height: rem(1465px);
-}
+// .content-bottom {
+//     height: rem(1465px);
+// }
 
 .content-var__schedule {
     display: flex;
+    // justify-content: space-between;
 }
 
 .content-inf {
@@ -488,6 +496,7 @@
     height: rem(100px);
     position: relative;
     display: block;
+    margin-top: rem(100px);
 }
 
 .footer__col-left {
@@ -933,13 +942,14 @@
 }
 
 .bx-wrapper .bx-prev {
-    left: -17%;
+    left: -10%;
     border-right: 2px solid#FFF;
     border-top: 2px solid #FFF;
 }
 
 .bx-wrapper .bx-next {
-    left: 114%;
+    position: absolute;
+    left: 107%;
     border-left: 2px solid #FFF;
     border-bottom: 2px solid #FFF;
 }
