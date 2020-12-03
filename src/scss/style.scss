@@ -1,3 +1,21 @@
+@function rem($px) {
+    @return $px / 16px + 0rem;
+}
+
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+} 
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+
 @import 'variables.scss';
 @import 'mixins/*.scss';
 
@@ -7,7 +25,8 @@
 
 // resolutions
 
-$phones: 481px;
+$tablets: 798px;
+$phones: 480px;
 
 // common
 

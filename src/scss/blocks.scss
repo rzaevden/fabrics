@@ -1,6 +1,6 @@
-@function rem($px) {
-    @return $px / $font-size + 0rem;
-}
+// @function rem($px) {
+//     @return $px / $font-size + 0rem;
+// }
 
 
 // header
@@ -153,6 +153,10 @@
         text-transform: uppercase;
         margin-bottom: rem(25px);
     }
+
+    @include phones {
+        height: rem(750px);
+    }
 }
 
 .through-panel {
@@ -172,17 +176,32 @@
 .through-panel__col {
     width: 33.333%;
 
+    &_left {
+
+        @include phones {
+            width: 50%;
+        }
+    }
+
     &_center {
         display: flex;
         justify-content: center;
         align-items: center;
         text-transform: uppercase;
+
+        @include phones {
+            display: none;
+        }
     }
 
     &_right {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
+        @include phones {
+            width: 50%;
+        }
     }
 }
 
@@ -236,6 +255,14 @@
         a {
             color: #000;
         }
+
+        &_mobile {
+            display: none;
+            @include phones {
+                display: flex;
+                margin-top: rem(20px);
+            }
+        }
     }
 
     &_position-1 {
@@ -278,11 +305,23 @@
 
 .header-bottom__item {
     margin-left: 3px;
+
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .header-bottom__item-title {
     font-size: rem(26px);
     font-weight: lighter;
+
+    @include phones {
+        font-size: rem(20px);
+    }
 }
 
 .header-bottom__item-desc {
@@ -290,6 +329,10 @@
     font-weight: bold;
     margin-top: 40px;
     margin-bottom: 50px;
+
+    @include phones {
+        font-size: rem(16px);
+    }
 }
 
 .content-top {
@@ -319,12 +362,27 @@
     .bx-wrapper .bx-next {
         display: none;
     }
+
+    @include phones {
+        top: -15%;
+    }
+}
+
+.content-var__item {
+
+    @include phones {
+        margin-right: rem(1px);
+    }
 }
 
 .content-var__point-title {
     text-transform: uppercase;
     font-size: rem(16px);
     margin-bottom: rem(20px);
+
+    @include phones {
+        font-size: rem(12px);
+    }
 }
 
 .content-var__point-oldprice {
@@ -332,10 +390,18 @@
     text-decoration: line-through;
     color: gray;
     margin-bottom: rem(5px);
+
+    @include phones {
+        font-size: rem(12px);
+    }
 }
 
 .content-var__point-newprice {
     font-size: rem(18px);
+
+    @include phones {
+        font-size: rem(14px);
+    }
 }
 
 .content-var__list {
@@ -394,20 +460,44 @@
 
 .content-inf__aboutcomp {
     display: flex;
+
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .content-inf__pic {
     margin-right: rem(30px);
+
+    @include phones {
+        margin-right: 0;
+    }
 }
 
 .content-inf__text {
     width: 40%;
     position: relative;
+
+    @include phones {
+        display: none;
+    }
+}
+
+.content-inf__desc {
+
+    @include phones {
+        display: none;
+    }
 }
 
 .content-inf__title {
     font-weight: bold;
     margin-bottom: rem(50px);
+
+    @include phones {
+        display: none;
+    }
 }
 
 .content-inf__img {
@@ -417,10 +507,30 @@
 .content-inf__sometext {
     display: flex;
     margin-top: rem(125px);
+
+    @include phones {
+        margin-top: rem(80px);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-inf__imgblock-title {
+
+        @include phones {
+            left: -120%;
+        }
+    }
+
+    .content-inf__imgblock-link {
+    
+        @include phones {
+            display: none;
+        }
+    }
 }
 
 .content-inf__imgblock {
-    width: rem(670px);
+    width: 50.112%;
     height: rem(491px);
     // border: 1px solid black;
     margin-left: rem(25px);
@@ -430,6 +540,11 @@
         margin: 0 auto;
         margin-top: rem(25px);
         margin-bottom: rem(55px);
+    }
+
+    @include phones {
+        margin-left: 0;
+        width: 100%;
     }
 }
 
@@ -506,6 +621,10 @@
 
 .content-inf__imgblock-link {
     margin-right: rem(5px);
+
+    @include phones {
+        display: none;
+    }
 }
 
 .content-inf__imgblock-shadow {
@@ -545,6 +664,10 @@
     flex-direction: column;
     justify-content: center;
 
+    @include phones {
+        display: none;
+    }
+
     &:last-child {
         margin-right: 0;
     }
@@ -571,6 +694,10 @@
     align-items: center;
 }
 
+.footer__col-link {
+    color: #fff;
+}
+
 .footer__shadow {
     position: absolute;
     top: 0;
@@ -579,6 +706,34 @@
     height: 100%;
     background: rgba(#000, 0.4);
 }
+
+.footer__col-mobile {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: rem(20px);
+
+    @include phones {
+        display: flex;
+    }
+}
+
+// footer dropdown 
+
+.footer__dropdown {
+    position: absolute;
+    top: -100%;
+    left: 0%;
+    background: red;
+    width: 100%;
+    height: 100px;
+    // border: 1px solid black;
+    // opacity: 0;
+}
+
+
+
+
 
 .footer__col-social {
     display: flex;
@@ -981,6 +1136,10 @@
     left: -10%;
     border-right: 2px solid#FFF;
     border-top: 2px solid #FFF;
+
+    @include phones {
+        left: -18%;
+    }
 }
 
 .bx-wrapper .bx-next {
