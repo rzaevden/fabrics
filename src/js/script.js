@@ -9,18 +9,18 @@ $(document).ready(function () {
 
 // dropdown
 
-$('.footer__inf-mobile').on('click', e => {
+$('.footer__dropdown-link').on('click', e => {
   e.preventDefault()
 
-  const dropDown = $('.dropdown')
+  const dropDown = $('.footer__dropdown')
 
   dropDown.addClass('dropdown__active');
 });
 
-$('.dropdown__close').on('click', e => {
+$('.footer__dropdown-cross').on('click', e => {
   e.preventDefault()
 
-  const dropDown = $('.dropdown')
+  const dropDown = $('.footer__dropdown')
 
   dropDown.removeClass('dropdown__active');
 });
